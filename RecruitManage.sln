@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage", "RecruitMan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.Domain", "RecruitManage.Domain\RecruitManage.Domain.csproj", "{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.Core", "RecruitManage.Core\RecruitManage.Core.csproj", "{35F3EF33-027A-42AB-8669-051B3DDA1FDD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.Services", "RecruitManage.Services\RecruitManage.Services.csproj", "{76C28C94-90FD-44B4-82CB-A8B67ED6C121}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.Repository", "RecruitManage.Repository\RecruitManage.Repository.csproj", "{848D28C9-D038-4D3E-BA33-C0E81D626CA1}"
@@ -20,6 +18,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{086CA3EB-CE0A-4DE3-995A-D9F03583CED0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C38529A1-08F9-4641-8054-018F8C2EFAD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitManage.IRepositories", "RecruitManage.IRepositories\RecruitManage.IRepositories.csproj", "{2EEAF8DF-8030-44C0-80D6-EA506569C020}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EF40BC5A-D785-4FF1-AA9F-251440B86920}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +37,6 @@ Global
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35F3EF33-027A-42AB-8669-051B3DDA1FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35F3EF33-027A-42AB-8669-051B3DDA1FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35F3EF33-027A-42AB-8669-051B3DDA1FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35F3EF33-027A-42AB-8669-051B3DDA1FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{76C28C94-90FD-44B4-82CB-A8B67ED6C121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76C28C94-90FD-44B4-82CB-A8B67ED6C121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76C28C94-90FD-44B4-82CB-A8B67ED6C121}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +45,10 @@ Global
 		{848D28C9-D038-4D3E-BA33-C0E81D626CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{848D28C9-D038-4D3E-BA33-C0E81D626CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{848D28C9-D038-4D3E-BA33-C0E81D626CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +58,8 @@ Global
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C} = {C38529A1-08F9-4641-8054-018F8C2EFAD6}
 		{76C28C94-90FD-44B4-82CB-A8B67ED6C121} = {0E1032E8-CF1E-456B-988C-7E80D1490B85}
 		{848D28C9-D038-4D3E-BA33-C0E81D626CA1} = {62546FD8-0CBB-4358-AE7A-74AFF63F6DAB}
+		{C38529A1-08F9-4641-8054-018F8C2EFAD6} = {EF40BC5A-D785-4FF1-AA9F-251440B86920}
+		{2EEAF8DF-8030-44C0-80D6-EA506569C020} = {62546FD8-0CBB-4358-AE7A-74AFF63F6DAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46FFAA60-37AC-4BA3-9268-0E5C48EB6205}
