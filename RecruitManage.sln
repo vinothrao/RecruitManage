@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{878DF2CF-23FE-463E-BB1D-64C6B85293F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitManageAPI", "RecruitManageAPI\RecruitManageAPI.csproj", "{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{C38529A1-08F9-4641-8054-018F8C2EFAD6} = {EF40BC5A-D785-4FF1-AA9F-251440B86920}
 		{2EEAF8DF-8030-44C0-80D6-EA506569C020} = {62546FD8-0CBB-4358-AE7A-74AFF63F6DAB}
 		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7} = {086CA3EB-CE0A-4DE3-995A-D9F03583CED0}
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE} = {878DF2CF-23FE-463E-BB1D-64C6B85293F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46FFAA60-37AC-4BA3-9268-0E5C48EB6205}

@@ -1,5 +1,11 @@
 version : "3.0"
 services:
+  recruit-manage-api:
+    build:
+      context: .
+      dockerfile : RecruitManageAPI/Dockerfile
+    ports:
+      - "8080:8080"
   web-app:
     build:
       context : .
