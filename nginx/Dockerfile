@@ -1,7 +1,6 @@
 ﻿FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR app
-ENV ASPNETCORE_URLS=http://+:4000
-EXPOSE 4000
+EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src

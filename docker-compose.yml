@@ -1,14 +1,21 @@
 version : "3.0"
 services:
-  recruit-manage-api:
+  recruitmanageapi:
     build:
       context: .
       dockerfile : RecruitManageAPI/Dockerfile
     ports:
       - "8080:8080"
-  web-app:
+  webapp:
     build:
       context : .
       dockerfile : RecruitManage/Dockerfile
     ports:
-      - "80:80"
+      - "4000:4000"
+  nginx:
+    restart : always
+    build:
+      context : .
+      dockerfile : RecruitManage/nginx/Dockerfile
+    ports:
+      - "3050:80"
