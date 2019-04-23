@@ -12,6 +12,9 @@ services:
       dockerfile : RecruitManage/Dockerfile
     ports:
       - "4000:4000"
+      
+  #added nginx proxy to route the requests between api and fron end since frond end js cannot call 
+  #api inside docker though docker compose networking
   nginx:
     restart : always
     build:
