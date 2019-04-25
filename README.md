@@ -1,3 +1,5 @@
+#FairWarning : It's an experimental project. So still more architectural changes and implementation are under process.Right now concentrating on Dockerizing and up with Kubernetes so that it will act as good example.
+
 Recruit mage service web application This is sample project that includes the following features :
 •	Service-Repository architecture with Facade pattern
 •	webapi with Angular as front end
