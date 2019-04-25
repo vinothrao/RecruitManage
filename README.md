@@ -14,3 +14,19 @@ minikube start --vm-driver=”hyperv” --hyperv-virtual-switch="Default Swi
 
 Default Switch Name can be take from Opening Hyper-V Manage -> Action - >Virtaul Switch Manager
 Or Create you own switch by following https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines
+
+Docker build Command :
+
+docker build -f RecruitManage\Dockerfile .
+ Note : User -t to tag a name for the built image (docker build -f RecruitManage\Dockerfile -t {name} .
+ 
+ Docker Compose Command:
+docker-compose up --build
+
+This compose build will do the following:
+
+1. Build 2 images one for client and another for web api.
+2. Set up an Nginx proxy to route the requests between api/client calls.
+
+Warning : Docker compose networking wont work for JS frameworks such as (Angular,React,Vue) to connect to the back end server. This is due to the fact the JS request are happening via browser ajax request which is outside of docker.Hence back end won't be available. So use nginx proxy to route the requests.
+ 
