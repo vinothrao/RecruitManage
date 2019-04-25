@@ -2,6 +2,7 @@ Recruit mage service web application This is sample project that includes the fo
 •	Service-Repository architecture with Facade pattern
 •	webapi with Angular as front end
 •	Docker container support
+•	Kubernetes 
 
 
 References: 
@@ -18,7 +19,7 @@ Or Create you own switch by following https://docs.microsoft.com/en-us/windows-s
 Docker build Command :
 
 docker build -f RecruitManage\Dockerfile .
- Note : User -t to tag a name for the built image (docker build -f RecruitManage\Dockerfile -t {name} .
+ Note : Use -t to tag a name for the built image (docker build -f RecruitManage\Dockerfile -t {name} .
  
  Docker Compose Command:
 docker-compose up --build
@@ -30,3 +31,6 @@ This compose build will do the following:
 
 Warning : Docker compose networking wont work for JS frameworks such as (Angular,React,Vue) to connect to the back end server. This is due to the fact the JS request are happening via browser ajax request which is outside of docker.Hence back end won't be available. So use nginx proxy to route the requests.
  
+ 
+ Important :
+ Make sure you ignore the file which is in .dockerignore
