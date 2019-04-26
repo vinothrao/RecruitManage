@@ -1,0 +1,18 @@
+
+kubectl and minikube set up: https://kubernetes.io/docs/tasks/tools/install-kubectl/ & https://kubernetes.io/docs/tasks/tools/install-minikube/
+ 
+Added kubectl support.
+
+Follow below step :
+
+1. push the webapp image to the docker registry
+2. cd to the folder of webapp-node-port.yaml andwebapp-pod.yaml files
+3. run this commands 2 time for the above 2 files : kubectl apply -f filepath
+4. check pod and service status : kubectl get pods / kubectl get services
+5. Get the minikube ip:
+6. Access minikubeip : port in browser.
+
+Known issue with kubectl and Docker :
+error: SchemaError(io.k8s.api.core.v1.ComponentCondition): invalid object doesn't have additional properties
+Solution :
+https://github.com/kubernetes/kubernetes/issues/73111
