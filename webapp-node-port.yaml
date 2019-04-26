@@ -1,12 +1,12 @@
 apiVersion : v1
-kind :Service
+kind : Service
 metadata : 
     name : webapp-node-port
 spec :
     type : NodePort
     ports :
         - port : 5000
-          targetPort : 3000
-          nodePort :31515
-    selector:
+          targetPort : 4000
+          nodePort : 31515
+    selector :
          component : webapp
