@@ -1,12 +1,12 @@
 apiVersion : v1
-kind : Pod
-metadata : 
+kind  : Pod
+metadata :
     name : webapp-pod
-    labels : 
+    labels :
         component : webapp
 spec :
-    containers : 
-        - name : webapp
-          image : vinothrao247/recruitmanagewebwpp
-          ports:
-           - containerPort : 4000
+    containers :
+        name : webapp
+        image : vinothrao247\recruitmanagewebwpp
+        port :
+            containerPort : 4000

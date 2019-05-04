@@ -1,0 +1,20 @@
+apiVersion : apps/v1
+kind  : Deployment
+metadata : 
+  name : api-deploment
+spec :
+  replicas : 1
+  selector :
+    matchLabels :
+      component : webapi
+  template :
+    metadata :
+     name : webapi
+     labels :
+        component : webapi
+    spec:
+      containers :
+       - name : api-container
+         image : vinothrao247/recruitmanageapi
+         ports :
+          - containerPort : 8080
