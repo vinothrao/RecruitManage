@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecruitManage.Domain;
 
 namespace RecruitManage.Domain.Migrations
 {
     [DbContext(typeof(RecruitManageContext))]
-    partial class RecruitManageContextModelSnapshot : ModelSnapshot
+    [Migration("20190612171352_othertables")]
+    partial class othertables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
