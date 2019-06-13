@@ -1,0 +1,23 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata:
+    name : recruitmanage-deployments
+spec:
+    replicas : 3
+    selector :
+     matchLabels:
+      component : webapp
+    template :
+      metadata :
+        name : webapp
+        labels :
+          component : webapp
+      spec :
+         containers :
+           - name : webapp-container
+             image : vinothrao247/recruitmanagewebwpp
+             ports :
+              - containerPort : 4000
+
+
+

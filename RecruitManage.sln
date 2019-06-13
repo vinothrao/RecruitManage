@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage", "RecruitManage\RecruitManage.csproj", "{F866511D-CFD1-41F2-945D-1B8E63C39DF0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.Domain", "RecruitManage.Domain\RecruitManage.Domain.csproj", "{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.Services", "RecruitManage.Services\RecruitManage.Services.csproj", "{76C28C94-90FD-44B4-82CB-A8B67ED6C121}"
@@ -19,9 +17,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C38529A1-08F9-4641-8054-018F8C2EFAD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitManage.IRepositories", "RecruitManage.IRepositories\RecruitManage.IRepositories.csproj", "{2EEAF8DF-8030-44C0-80D6-EA506569C020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage.IRepositories", "RecruitManage.IRepositories\RecruitManage.IRepositories.csproj", "{2EEAF8DF-8030-44C0-80D6-EA506569C020}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EF40BC5A-D785-4FF1-AA9F-251440B86920}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManage", "RecruitManage\RecruitManage.csproj", "{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D6AF08A-4FBC-4C4A-B801-22893756D8EF}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
+		webapp-lb.yaml = webapp-lb.yaml
+		webapp-pod.yaml = webapp-pod.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{878DF2CF-23FE-463E-BB1D-64C6B85293F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitManageAPI", "RecruitManageAPI\RecruitManageAPI.csproj", "{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{C9FAC56B-9A18-4E8C-A6A7-238A44AC640D}"
+	ProjectSection(SolutionItems) = preProject
+		default.conf = default.conf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +46,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F866511D-CFD1-41F2-945D-1B8E63C39DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F866511D-CFD1-41F2-945D-1B8E63C39DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F866511D-CFD1-41F2-945D-1B8E63C39DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F866511D-CFD1-41F2-945D-1B8E63C39DF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,17 +62,26 @@ Global
 		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EEAF8DF-8030-44C0-80D6-EA506569C020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F866511D-CFD1-41F2-945D-1B8E63C39DF0} = {086CA3EB-CE0A-4DE3-995A-D9F03583CED0}
 		{8BF9EE3E-B354-450F-96C4-D657BCCC4E2C} = {C38529A1-08F9-4641-8054-018F8C2EFAD6}
 		{76C28C94-90FD-44B4-82CB-A8B67ED6C121} = {0E1032E8-CF1E-456B-988C-7E80D1490B85}
 		{848D28C9-D038-4D3E-BA33-C0E81D626CA1} = {62546FD8-0CBB-4358-AE7A-74AFF63F6DAB}
 		{C38529A1-08F9-4641-8054-018F8C2EFAD6} = {EF40BC5A-D785-4FF1-AA9F-251440B86920}
 		{2EEAF8DF-8030-44C0-80D6-EA506569C020} = {62546FD8-0CBB-4358-AE7A-74AFF63F6DAB}
+		{B44FC8D0-6C74-4016-A9A3-765EE7537FE7} = {086CA3EB-CE0A-4DE3-995A-D9F03583CED0}
+		{D8C5393F-D4C8-425A-A1B9-FA58ED064CCE} = {878DF2CF-23FE-463E-BB1D-64C6B85293F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46FFAA60-37AC-4BA3-9268-0E5C48EB6205}
