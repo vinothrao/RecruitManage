@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "RecruitManage": {
+    "RecruitManage.Web": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -52,18 +52,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "RecruitManage:build"
+            "browserTarget": "RecruitManage.Web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "RecruitManage:build:production"
+              "browserTarget": "RecruitManage.Web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RecruitManage:build"
+            "browserTarget": "RecruitManage.Web:build"
           }
         },
         "test": {
@@ -122,7 +122,7 @@
         }
       }
     },
-    "RecruitManage-e2e": {
+    "RecruitManage.Web-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -130,7 +130,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "RecruitManage:serve"
+            "devServerTarget": "RecruitManage.Web:serve"
           }
         },
         "lint": {
@@ -145,5 +145,5 @@
       }
     }
   },
-  "defaultProject": "RecruitManage"
+  "defaultProject": "RecruitManage.Web"
 }
