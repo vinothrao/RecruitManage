@@ -6,6 +6,11 @@ namespace RecruitManage.Domain
 {
     public class RecruitManageContext:DbContext
     {
+        public RecruitManageContext()
+        {
+
+        }
+
         public RecruitManageContext(DbContextOptions<RecruitManageContext> options):base(options)
         {
         }
@@ -17,6 +22,10 @@ namespace RecruitManage.Domain
         public DbSet<Technologies> Technologies { get; set; }
         public DbSet<UserTechnologyMapping> UserTechnologyMapping { get; set; }
         public DbSet<UserDetails> UserDetails { get; set; }
+        public DbSet<Candidate>  Candidates { get; set; }
+        public DbSet<CandidateTechnologyMapping>  CandidateTechnologyMappings { get; set; }
+        public DbSet<InterviewSchedule> InterviewSchedule { get; set; }
+        public DbSet<InterviewFeedback>   InterviewFeedbacks { get; set; }
 
     }
 }

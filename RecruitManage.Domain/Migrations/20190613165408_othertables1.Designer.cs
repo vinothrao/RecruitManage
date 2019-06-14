@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecruitManage.Domain;
 
 namespace RecruitManage.Domain.Migrations
 {
     [DbContext(typeof(RecruitManageContext))]
-    partial class RecruitManageContextModelSnapshot : ModelSnapshot
+    [Migration("20190613165408_othertables1")]
+    partial class othertables1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,27 +61,6 @@ namespace RecruitManage.Domain.Migrations
                     b.HasIndex("TechnologyId");
 
                     b.ToTable("CandidateTechnologyMappings");
-                });
-
-            modelBuilder.Entity("RecruitManage.Domain.Entities.InterviewFeedback", b =>
-                {
-                    b.Property<int>("InterviewFeedbackId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Feedback");
-
-                    b.Property<bool>("FeedbackSentToCandidate");
-
-                    b.Property<bool>("IsSelected");
-
-                    b.Property<int>("ScheduleId");
-
-                    b.HasKey("InterviewFeedbackId");
-
-                    b.HasIndex("ScheduleId");
-
-                    b.ToTable("InterviewFeedbacks");
                 });
 
             modelBuilder.Entity("RecruitManage.Domain.Entities.InterviewSchedule", b =>
@@ -242,14 +223,6 @@ namespace RecruitManage.Domain.Migrations
                     b.HasOne("RecruitManage.Domain.Entities.Technologies", "Technologies")
                         .WithMany()
                         .HasForeignKey("TechnologyId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("RecruitManage.Domain.Entities.InterviewFeedback", b =>
-                {
-                    b.HasOne("RecruitManage.Domain.Entities.InterviewSchedule", "InterviewSchedule")
-                        .WithMany()
-                        .HasForeignKey("ScheduleId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

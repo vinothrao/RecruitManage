@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using RecruitManage.Domain;
 
 namespace RecruitManageAPI
 {
@@ -33,7 +35,13 @@ namespace RecruitManageAPI
             }));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-           
+            // Add EF services to the services container.
+            services.AddEntityFrameworkSqlServer()
+               .AddDbContext<RecruitManageContext>(options =>
+                  options.UseSqlServer(Configuration.GetConnectionString("RecruitManageDatabase")));
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
