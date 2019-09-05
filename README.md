@@ -1,6 +1,6 @@
 #FairWarning : It's an experimental project. So still more architectural changes and implementation are under process.Right now concentrating on Dockerizing and up with Kubernetes so that it will act as good example.
 
-Recruit mage service web application This is sample project that includes the following features :
+Recruit manage service web application This is sample project that includes the following features :
 •	Service-Repository architecture with Facade pattern
 •	webapi with Angular as front end
 •	Docker container support
@@ -11,7 +11,7 @@ References:
 •	https://www.udemy.com/docker-and-kubernetes-the-complete-guide
 •	https://medium.com/devopslinks/minikube-installation-on-windows-10-9908d17cfad9
 
-For minikube in local follow the above minikube installation guid and use the following command:
+For minikube in local follow the above minikube installation guide and use the following command:
 
 minikube start --vm-driver=”hyperv” --hyperv-virtual-switch="Default Switch"
 
